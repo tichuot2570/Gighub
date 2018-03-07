@@ -51,6 +51,7 @@ namespace Gighub.Controllers.Api
                     User = attendee,
                     Notification = notification
                 };
+
                 _context.UserNotifications.Add(userNotification);
             }
             _context.SaveChanges();
