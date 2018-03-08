@@ -18,11 +18,13 @@ namespace Gighub.Models
 
         public ICollection<Following> Followers { get; set; }
         public ICollection<Following> Followees { get; set; }
+        public ICollection<UserNotification> UserNotifications { get; set; }
 
         public ApplicationUser()
         {
             Followers = new Collection<Following>();
             Followees = new Collection<Following>();
+            UserNotifications = new Collection<UserNotification>();
         }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
@@ -31,6 +33,12 @@ namespace Gighub.Models
         var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);
             // Add custom user claims here
             return userIdentity;
+        }
+        //the reverse relationship b/w UserNotification and ApplicationUser
+        public void Notify(Notification notification)
+        {
+            var userNotification = new UserNotification(this, notification);
+            UserNotifications.Add(userNotification);
         }
     }
 }
