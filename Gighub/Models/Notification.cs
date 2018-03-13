@@ -40,6 +40,7 @@ namespace Gighub.Models
             var notification = new Notification(NotificationType.GigUpdated, newGig);
             notification.OriginalDateTime = originalDateTime;
             notification.OriginalVenue = originalVenue;
+            
 
             return notification;
         }

@@ -48,7 +48,7 @@ namespace Gighub.Models
         {
             var notification = Notification.GigUpdated(this, dateTime, venue);
 
-            Venue = Venue;
+            Venue = venue;
             DateTime = dateTime;
             GenreId = genre;
 

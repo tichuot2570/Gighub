@@ -36,6 +36,9 @@ span.field-validation-error {
 .voffset3 { margin-top: 20px; }
 .voffset4 { margin-top: 40px; }
 .voffset5 { margin-top: 80px; }
+
+
+
 /* Bootstrap Overrides */
 
 
@@ -45,21 +48,22 @@ span.field-validation-error {
   border-color: #ff4342;
 }
 
-.dropdown-menu {
-  box-shadow: none;
-}
+
 
 .navbar-inverse .navbar-nav > li > a {
   color: #fff;
 }
 
-.navbar-inverse .navbar-brand {
-  color: #ffffff;
+  .navbar-inverse .navbar-brand {
+    color: #fff;
+  }
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: rgba(205, 40, 39, 0.55);
 }
 
-.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus .form-group, .navbar-inverse .navbar-nav > .open > a,
-.navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-  background-color: rgba(205, 40, 39, 0.55);
+.dropdown-menu {
+  box-shadow: none;
 }
 
 .navbar-inverse .navbar-nav > .dropdown > a .caret {
@@ -67,9 +71,23 @@ span.field-validation-error {
   border-bottom-color: #fff;
 }
 
+
 .navbar-brand {
   font-weight: 700;
 }
+
+.navbar-inverse .notifications {
+  position: relative;
+}
+
+  .navbar-inverse .notifications .badge {
+    position: absolute;
+    top: 8px;
+    right: -1px;
+    background: #a80a0a;
+  }
+
+
 
 
 
@@ -150,14 +168,16 @@ form-control {
     left: 70px;
   }
 
+.gigs > li .details .genre {
+  font-size: 15px;
+}
+
+
     .gigs > li .details .artist {
       font-weight: bold;
       display: block;
     }
 
-    .gigs > li .details .genre {
-      font-size: 15px;
-    }
 
   .gigs > li:default .actions {
     display: none;
@@ -167,6 +187,7 @@ form-control {
     display: block;
   }
     
+
 
     
 
